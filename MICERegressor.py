@@ -47,20 +47,3 @@ class MICEGlobalLocalRegressor(MICERegressor):
 
 	def predict(self, exog):
 		return self.weights * self.global_regressor.predict(exog) + (1 - self.weights) * self.local_regressor.predict(exog)
-
-'''
-Dummy Regression - most_frequent t0 belief prob
-
-Random Forest: Randomly impute columns
-
-Imputation Error: Tune the imputatoin algorithm before feeding into the pipeline - resampled missingness - following the missing pattern
-
-overlay missingness on the complete cases
-uniformly remove points
-
-pruning / tuning
-
-remova GPR and adaboost
-
-explain SL imputation - evaluate imputation similar to SL
-'''
